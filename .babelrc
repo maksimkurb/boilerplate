@@ -1,0 +1,9 @@
+{
+    "presets": [["env", {
+        "targets": {
+        "node": "current"
+        },
+        "include": ["transform-es2015-spread"]
+    }]],
+    "plugins": ["transform-object-rest-spread"]
+}

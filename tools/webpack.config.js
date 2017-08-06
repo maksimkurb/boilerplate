@@ -23,13 +23,6 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: [['env', {
-              targets: {
-                node: 'current',
-              },
-              include: ['transform-es2015-spread'],
-            }]],
-            plugins: ['transform-object-rest-spread'],
             cacheDirectory: path.resolve(__dirname, '..', constants.BUILD_DIR),
           },
         },
