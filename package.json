@@ -7,8 +7,9 @@
   "scripts": {
     "build": "node tools/run build",
     "clean": "node tools/run clean",
-    "test": "jest",
-    "prepublish": "npm run test"
+    "test": "node tools/run test",
+    "lint": "node tools/run lint",
+    "prepublish": "node tools/run prepublish"
   },
   "author": "Maxim Kurbatov <maksimkurb@gmail.com>",
   "license": "MIT",
@@ -22,6 +23,9 @@
     "babel-loader": "^7.1.1",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
     "babel-preset-env": "^1.6.0",
+    "eslint": "^4.4.0",
+    "eslint-config-airbnb-base": "^11.3.1",
+    "eslint-plugin-import": "^2.7.0",
     "fs-extra": "^4.0.1",
     "jest": "^20.0.4",
     "webpack": "^3.4.1"

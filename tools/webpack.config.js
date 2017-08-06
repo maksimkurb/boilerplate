@@ -1,11 +1,10 @@
 const path = require('path');
-
-const DEBUG = process.env.NODE_ENV !== 'production';
 const constants = require('./constants');
 
+const DEBUG = process.env.NODE_ENV !== 'production';
 const srcRegexp = new RegExp(constants.SOURCES_DIR);
 
-module.exports = {  
+module.exports = {
   entry: path.resolve(__dirname, '..', constants.SOURCES_DIR, 'index.js'),
   output: {
     filename: '[name].js',
@@ -14,6 +13,10 @@ module.exports = {
 
   // SourceMaps
   devtool: 'cheap-module-source-map',
+
+  stats: {
+    colors: constants.USE_STDOUT_COLORS,
+  },
 
   module: {
     rules: [
