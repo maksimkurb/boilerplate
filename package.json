@@ -7,7 +7,8 @@
   "scripts": {
     "build": "node tools/run build",
     "clean": "node tools/run clean",
-    "test": "jest"
+    "test": "jest",
+    "prepublish": "npm run test"
   },
   "author": "Maxim Kurbatov <maksimkurb@gmail.com>",
   "license": "MIT",
