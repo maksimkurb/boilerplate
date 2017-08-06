@@ -12,6 +12,10 @@
   },
   "author": "Maxim Kurbatov <maksimkurb@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/maksimkurb/boilerplate.git"
+  },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-jest": "^20.0.3",
