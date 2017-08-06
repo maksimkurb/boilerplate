@@ -2,18 +2,19 @@ function formatTime(date) {
     return date.toTimeString().substr(0, 8);
 }
 
-function run(fn, opts) {
+async function run(fn, opts) {
     if (typeof fn === 'string') {
         fn = require(`./${fn}`);
     }
 
     const tStart = new Date();
     console.log(`[${formatTime(tStart)}] Starting '${fn.name}'${opts?` (${opts})`:''}...`);
-    return fn(opts).then(() => {
-        const tEnd = new Date();
-        const diff = end.getTime() - start.getTime();
-        console.log(`[${formatTime(tStart)}] Finished '${fn.name}' is ${diff} ms`);
-    })
+    
+    await fn(opts);
+    
+    const tEnd = new Date();
+    const diff = tEnd.getTime() - tStart.getTime();
+    console.log(`[${formatTime(tStart)}] Finished '${fn.name}' is ${diff} ms`);
 }
 
 module.exports = run;
