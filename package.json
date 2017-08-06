@@ -8,8 +8,7 @@
     "build": "node tools/run build",
     "clean": "node tools/run clean",
     "test": "node tools/run test",
-    "lint": "node tools/run lint",
-    "prepublish": "node tools/run prepublish"
+    "lint": "node tools/run lint"
   },
   "author": "Maxim Kurbatov <maksimkurb@gmail.com>",
   "license": "MIT",
